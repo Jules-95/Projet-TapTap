@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapTap</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <h1>TapTap</h1>
+        <h2>⌨️ Entraîne ta vitesse de frappe ⌨️</h2>
+        <h3>⚡Ecris la proposition le plus rapidement possible⚡</h3>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="zoneOptions">
+            <p>Choisis un mode et tape la proposition ci-dessous.</p>
+            <div class="optionSource">
+                <input type="radio" name="optionSource" id="mots" value="1" checked>
+                <label for="mots">Mots</label>
+                <input type="radio" name="optionSource" id="phrases" value="2">
+                <label for="phrases">Phrases</label>
+            </div>
+        </div>
+
+        <div class="zoneProposition"></div>
+
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture" placeholder="Tape ta réponse ici…">
+            <button id="btnValiderMot">Valider</button>
+        </div>
+
+        <div class="zoneScore">
+            Votre score : <span>0(MPM)</span>
+        </div>
+        
+        <div class="zonePartage">
+            <button>Partager</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+         Projet pédagogique – inspiré d’OpenClassrooms. Version personnalisée.
+    </footer>
+
+     <!-- Popup de partage -->
+    <div class="popupBackground">
+        <div class="popup">
+            <div>Partage ton score</div>
+            <form novalidate>
+                <label for="nom">Ton nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Destinataire</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer mon score</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
